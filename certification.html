@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Doctor Certification – Master Grow Consulting</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-wrapper">
+            <h1 class="logo"><a href="index.html">Master&nbsp;Grow&nbsp;Consulting</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="packages.html">Setup&nbsp;Packages</a></li>
+                    <li><a href="certification.html" class="active">Certification</a></li>
+                    <li><a href="about.html">About&nbsp;Us</a></li>
+                    <li><a href="compliance.html">Legal &amp; Compliance</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Grow Doctor Certification Program</h2>
+            <p>Turn your passion for cultivation into a career.  Our comprehensive program covers the science, technology and business of cannabis cultivation.  Graduates earn recognised badges and may join our technician network.</p>
+        </div>
+    </section>
+
+    <section class="modules-section" id="modules-section">
+        <div class="container">
+            <h3>Curriculum Overview</h3>
+            <p>The program is structured into six core modules.  Each module includes instructional content, hands‑on assignments and assessments.  Click on a module below to view a summary of what you will learn.</p>
+            <div class="modules-list">
+                <details>
+                    <summary><strong>Module 1 – Cannabis Botany &amp; Plant Physiology</strong></summary>
+                    <p><em>Key topics:</em> cannabis taxonomy and diversity, plant anatomy (roots, stems, leaves, flowers), photosynthesis and plant physiology, plant hormones, sexual reproduction and cloning, cannabinoid and terpene biosynthesis.</p>
+                    <p><em>Assessments:</em> multiple‑choice quiz, labelled diagram assignment, short essay comparing sativa vs indica traits, research report on photoperiod effects, lifecycle knowledge check.</p>
+                </details>
+                <details>
+                    <summary><strong>Module 2 – Environmental Control &amp; Lighting</strong></summary>
+                    <p><em>Key topics:</em> maintaining optimal temperature and humidity, calculating vapour pressure deficit (VPD), ventilation and odour control, comparing lighting technologies (HID vs LED vs fluorescent), CO₂ supplementation and safety, facility design and scalability.</p>
+                    <p><em>Assessments:</em> VPD calculation exercise, tent design project, case study on heat stress, facility planning exercise, short‑answer quiz.</p>
+                </details>
+                <details>
+                    <summary><strong>Module 3 – Nutrients &amp; Water Management</strong></summary>
+                    <p><em>Key topics:</em> macro‑ and micronutrients, nutrient schedules for soil, coco and hydroponics, water quality management (pH, EC, TDS), mixing nutrient solutions, recognising nutrient deficiencies and toxicities, irrigation systems (hand, drip, ebb‑and‑flow) and foliar feeding.</p>
+                    <p><em>Assessments:</em> feeding schedule assignment, diagnostic quiz from leaf photos, lab exercise mixing a nutrient solution, irrigation system design project.</p>
+                </details>
+                <details>
+                    <summary><strong>Module 4 – Pest &amp; Disease Management</strong></summary>
+                    <p><em>Key topics:</em> identification of pests (spider mites, aphids, thrips, etc.) and diseases (powdery mildew, root rot, viruses), prevention and sanitation, scouting and thresholds, biological controls, mechanical and chemical controls, integrated pest management (IPM) planning and record‑keeping.</p>
+                    <p><em>Assessments:</em> pest identification lab, IPM plan development, case study on integrated control strategies.</p>
+                </details>
+                <details>
+                    <summary><strong>Module 5 – Compliance, Safety &amp; Client Relations</strong></summary>
+                    <p><em>Key topics:</em> Nevada home grow regulations (age, distance and plant limits, enclosed cultivation requirements), state licencing categories, working within personal and commercial property rules, Metrc seed‑to‑sale tracking basics, record‑keeping and reporting, client communication and professionalism.</p>
+                    <p><em>Assessments:</em> written exam on Nevada statutes, compliance checklist creation, mock client consultation.</p>
+                </details>
+                <details>
+                    <summary><strong>Module 6 – Business Operations &amp; Scaling</strong></summary>
+                    <p><em>Key topics:</em> designing scalable service models, workforce organisation (apprentice → technician → specialist), pricing strategies and subscription tiers, partner relationship management, marketing fundamentals, operations planning and risk management.</p>
+                    <p><em>Assessments:</em> business plan presentation, marketing plan development, scaling strategy analysis.</p>
+                </details>
+            </div>
+            <p>Optional specialist modules are available for advanced horticulture techniques, extraction fundamentals, genetics and breeding, and laboratory operations.</p>
+            <p>You can download the complete curriculum document here: <a href="curriculum/Certified_Grow_Doctor_Curriculum_Full_Content.md" download>Certified Grow Doctor Curriculum (MD)</a>.</p>
+            <a href="contact.html" class="cta-button">Join the Program</a>
+        </div>
+    </section>
+
+    <script>
+        // Membership gating: hide modules if not logged in
+        (function() {
+            const isMember = localStorage.getItem('mgc_member') === 'true';
+            const modulesSection = document.getElementById('modules-section');
+            if (!isMember) {
+                modulesSection.innerHTML = '';
+                const container = document.createElement('div');
+                container.className = 'container';
+                const message = document.createElement('p');
+                message.innerHTML = 'Access to the Grow Doctor curriculum is restricted to members. Please <a href="login.html">log in</a> to view the modules.';
+                message.style.marginTop = '2rem';
+                container.appendChild(message);
+                modulesSection.appendChild(container);
+            }
+        })();
+    </script>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="compliance.html">Compliance</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Get in Touch</h4>
+                <p>Email: info@mastergrowconsulting.com</p>
+                <p>Phone: (702) 555‑1234</p>
+                <p>Las Vegas, NV</p>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <p>Stay up to date with tips and insights. Follow us on social media.</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Master Grow Consulting. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="assets/script.js"></script>
+</body>
+</html>

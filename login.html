@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Login – Master Grow Consulting</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-wrapper">
+            <h1 class="logo"><a href="index.html">Master&nbsp;Grow&nbsp;Consulting</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="packages.html">Setup&nbsp;Packages</a></li>
+                    <li><a href="certification.html">Certification</a></li>
+                    <li><a href="about.html">About&nbsp;Us</a></li>
+                    <li><a href="compliance.html">Legal &amp; Compliance</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="page-header">
+        <div class="container">
+            <h2>Member Login</h2>
+            <p>Please enter your credentials to access the educational platform.</p>
+        </div>
+    </section>
+    <section class="login-content">
+        <div class="container login-form">
+            <form id="login-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <input type="submit" value="Login" class="cta-button">
+            </form>
+            <p id="login-message" class="note"></p>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="certification.html">Certification</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Get in Touch</h4>
+                <p>Email: info@mastergrowconsulting.com</p>
+                <p>Phone: (702) 555‑1234</p>
+                <p>Las Vegas, NV</p>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <p>Stay up to date with tips and insights. Follow us on social media.</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Master Grow Consulting. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="assets/script.js"></script>
+    <script>
+        (function() {
+            const form = document.getElementById('login-form');
+            const message = document.getElementById('login-message');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const username = document.getElementById('username').value.trim();
+                const password = document.getElementById('password').value.trim();
+                // Hardcoded membership credentials for demonstration
+                if (username === 'member' && password === 'grow2025') {
+                    localStorage.setItem('mgc_member', 'true');
+                    message.textContent = 'Login successful! Redirecting...';
+                    message.style.color = '#2b665e';
+                    setTimeout(() => {
+                        window.location.href = 'certification.html';
+                    }, 1000);
+                } else {
+                    message.textContent = 'Invalid credentials. Please try again.';
+                    message.style.color = '#d9534f';
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
